@@ -6,7 +6,8 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <h1>
         This is our content web form
-        <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Button" />
-    </h1>
+        </h1>
+<p>
+        &nbsp;</p>
 
 </asp:Content>
