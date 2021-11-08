@@ -23,10 +23,7 @@
     <div class ="container">
         <div class ="row">
                 <div class ="col-md-6 mx-auto">
-                    
-                    
-                    
-                    <div class ="auto-style2">
+                    <div class ="card">
                         <div class ="card-body">
 
                                 <div class ="row">
@@ -89,6 +86,7 @@
 
                   
         </div>
+    </div>
     </div>
         
 
