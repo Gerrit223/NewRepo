@@ -11,7 +11,6 @@ namespace PhotoSharingProject_First
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            Response.Write("<script>alert('Successfully logged in');</script>");
         }
 
         protected void btnUpload_Click(object sender, EventArgs e)

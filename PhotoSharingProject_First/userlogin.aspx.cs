@@ -53,8 +53,9 @@ namespace PhotoSharingProject_First
                         Session["role"] = "user";
                     }
 
-                    Response.Redirect("menu.aspx");
 
+                    Response.Redirect("menu.aspx");
+                    Response.Write("<script>alert('Successfully logged in!');</script>");
                 }
                 else
                 {
