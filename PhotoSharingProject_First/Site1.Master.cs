@@ -11,7 +11,19 @@ namespace PhotoSharingProject_First
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            //try
+            //{
+            //    if (Session["role"].Equals(""))
+            //    {
 
+            //    }
+
+            //}
+            //catch(Exception ex)
+            //{
+            //    Response.Write("<script>alert('" + ex.Message + "');</script>");
+            //}
+            
         }
     }
 }

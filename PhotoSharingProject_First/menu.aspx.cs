@@ -13,5 +13,20 @@ namespace PhotoSharingProject_First
         {
             Response.Write("<script>alert('Successfully logged in');</script>");
         }
+
+        protected void btnUpload_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("upload.aspx");
+        }
+
+        protected void btnShare_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("share.aspx");
+        }
+
+        protected void btnView_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("viewedit.aspx");
+        }
     }
 }

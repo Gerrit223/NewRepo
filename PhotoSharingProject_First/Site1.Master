@@ -51,7 +51,7 @@
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
             <li><a class="dropdown-item" href="userlogin.aspx">Login</a></li>
             <li><a class="dropdown-item" href="usersignup.aspx">Sign up</a></li>
-            <li><a class="dropdown-item" href="#">Logout</a></li>
+            <li><a class="dropdown-item" href="homepage.aspx">Logout</a></li>
           </ul>
         </li>
       </ul>

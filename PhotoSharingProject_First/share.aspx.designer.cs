@@ -10,7 +10,7 @@
 
 namespace PhotoSharingProject_First
 {
-    public partial class viewandshare
+    public partial class share
     {
     }
 }

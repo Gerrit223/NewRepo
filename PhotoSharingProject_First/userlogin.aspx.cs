@@ -42,10 +42,19 @@ namespace PhotoSharingProject_First
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
+                SqlDataReader dr = cmd.ExecuteReader();
 
-                if (dt.Rows.Count == 1)
-                {      
+                if (dr.HasRows)
+                {
+                    while(dr.Read())
+                    {
+                        Session["userID"] = dr.GetValue(0).ToString();
+                        Session["username"] = dr.GetValue(3).ToString();
+                        Session["role"] = "user";
+                    }
+
                     Response.Redirect("menu.aspx");
+
                 }
                 else
                 {
