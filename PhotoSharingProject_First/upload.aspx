@@ -119,9 +119,41 @@
                            </center>     
                        </div>
                      <p></p>
-                         <p></p>
+                         <p>
+                             <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:photosharingDBConnectionString %>" SelectCommand="SELECT [photo_id], [date_added], [tag], [photo_link] FROM [photos]"></asp:SqlDataSource>
+                           </p>
 
+                          <asp:GridView class="table table-striped table-bordered" ID="GridView1" runat="server" Width="677px" AutoGenerateColumns="False" DataKeyNames="photo_id" DataSourceID="SqlDataSource1">
+                              <Columns>
+                                  <asp:BoundField DataField="photo_id" HeaderText="ID" ReadOnly="True" SortExpression="photo_id" />
+                                 
+                                  <asp:TemplateField>
+                                      <ItemTemplate>
+                                          <div class="container-fluid">
+                                                <div class="row">
+                                                    <div class="col-lg-10">
+                                                        <div class="row">
+                                                            <div class="col-12">
+                                                                <asp:Label ID="Label1" runat="server" Text='<%# Eval("tag") %>' Font-Bold="True" Font-Size="Large"></asp:Label>
+                                                            </div>
+                                                        </div>
+                                                        &nbsp;<div class="col-12">
+                                                                <asp:Label ID="Label5" runat="server" Text='<%# Eval("date_added") %>'></asp:Label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-2">
+                                                        <asp:Image class="img-fluid " Height ="150px" Width ="900px" ID="Image1" runat="server" ImageUrl='<%# Eval("photo_link") %>' />
+                                                    </div>
 
+                                                </div>
+
+                                          </div>
+                                      </ItemTemplate>
+                                  </asp:TemplateField>
+                                 
+                              </Columns>
+                           </asp:GridView>
                         <div class ="row">
                            <center>
                               <asp:Button class="btn btn-primary btn-block btn-lg" ID="btnUpload" runat="server" Text="Upload" OnClick="btnUpload_Click" />

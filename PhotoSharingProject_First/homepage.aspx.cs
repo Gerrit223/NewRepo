@@ -11,7 +11,7 @@ namespace PhotoSharingProject_First
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            Session["userID"] = "";
         }
     }
 }

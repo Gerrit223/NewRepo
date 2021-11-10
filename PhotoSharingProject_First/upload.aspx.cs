@@ -17,7 +17,7 @@ namespace PhotoSharingProject_First
         int photoID;
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+            GridView1.DataBind();
         }
 
         protected void btnUpload_Click(object sender, EventArgs e)
