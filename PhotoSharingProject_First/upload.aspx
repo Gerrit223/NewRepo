@@ -1,5 +1,27 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="upload.aspx.cs" Inherits="PhotoSharingProject_First.upload" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+
+    <script type ="text/javascript">
+
+        function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+
+                reader.onload = function (e) {
+                    $("#imgview").attr('scr', e.target.result);
+
+                };
+
+                reader.readAsDataURL(input.files[0]);
+            }
+
+        }
+    </script>
+
+
+
+
     <style type="text/css">
         .auto-style4 {
             width: 100%;
@@ -52,7 +74,7 @@
                  <div class="card-body">
                       <div class ="row">
                            <center>
-                               <asp:Image ID="Image1" runat="server" Height="107px" Width="139px" />
+                              <img id ="imgview" Height="150px" Width="100px" src="photo_inventory/camera.png" />
                                <br />
                                <br />
                                <table class="auto-style4">
@@ -93,7 +115,7 @@
 
                        <div class ="row">
                            <center>
-                               <asp:FileUpload class="btn btn-dark btn-block btn-lg" ID="FileUpload1" runat="server" Width="299px" />
+                               <asp:FileUpload onchange ="readURL(this);" class ="form-control" ID="FileUpload1" runat="server" Width="299px" />
                            </center>     
                        </div>
                      <p></p>
@@ -126,6 +148,7 @@
     </div>
 
     </div>
+     </div>
 
 
             
