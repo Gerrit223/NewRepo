@@ -17,6 +17,9 @@ namespace PhotoSharingProject_First
         int photoID;
         protected void Page_Load(object sender, EventArgs e)
         {
+            //int id = Session["userID"];
+            SqlDataSource1.SelectCommand = "SELECT p.photo_id,p.date_added, p.tag, p.photo_link FROM photos p, userphotos up WHERE up.user_id = '" + Session["userID"]+"' AND p.photo_id = up.photo_id";
+
             GridView1.DataBind();
         }
 

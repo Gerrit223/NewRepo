@@ -120,7 +120,7 @@
                        </div>
                      <p></p>
                          <p>
-                             <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:photosharingDBConnectionString %>" SelectCommand="SELECT [photo_id], [date_added], [tag], [photo_link] FROM [photos]"></asp:SqlDataSource>
+                             <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:photosharingDBConnectionString %>"></asp:SqlDataSource>
                            </p>
 
                           <asp:GridView class="table table-striped table-bordered" ID="GridView1" runat="server" Width="677px" AutoGenerateColumns="False" DataKeyNames="photo_id" DataSourceID="SqlDataSource1">
