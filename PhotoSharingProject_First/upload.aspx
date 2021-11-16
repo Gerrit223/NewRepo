@@ -62,7 +62,7 @@
 
                               <div class ="row">
                                     <div class ="col">
-                                        </hr>
+                                        <hr/>
                                     </div>
                                 </div>
                  </div>
@@ -93,7 +93,7 @@
                                    </tr>
                                    <tr>
                                        <td class="auto-style9">
-                                           <asp:Label ID="Label3" runat="server" Text="File size(kb)"></asp:Label>
+                                           <asp:Label ID="Label3" runat="server" Text="Location"></asp:Label>
                                        </td>
                                        <td class="auto-style8">
                                            <asp:TextBox ID="txtFileSize" runat="server" Width="205px"></asp:TextBox>
