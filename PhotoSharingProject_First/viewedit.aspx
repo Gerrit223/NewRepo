@@ -82,19 +82,35 @@
 
         <div class ="col-md-15">
             <div class ="card">
-                <div class="auto-style1">
+                <div class="card-body">
                     <center>
-                          <asp:Label ID="ID" runat="server" Text="ID"></asp:Label>
+                          <asp:Label ID="ID" runat="server" Text="ID" Font-Bold="True"></asp:Label>
                            <p></p>
                              <asp:TextBox ID="txtId" runat="server" OnTextChanged="TextBox1_TextChanged"></asp:TextBox>
                             <p></p>
                             <asp:Button class="btn btn-primary btn-block btn-lg" ID="btnDelete" runat="server" Text="Delete" OnClick="btnDelete_Click" />
                     </center>
+
                   
                 </div>
             </div>
         </div>
-        
 
+        <div class= "col=md-15">
+            <div class="card">
+                <div class="card-body">
+                    <center>
+                        <asp:Label ID="Label4" runat="server" Text="Update Location" Font-Bold="True"></asp:Label>
+                        <p></p>
+                        <asp:TextBox ID="txtUpdateTag" runat="server"></asp:TextBox>
+                        <p></p>
+                        <asp:Button class="btn btn-primary btn-block btn-lg" ID="btnUpdate" runat="server" Text="Update" OnClick="btnUpdate_Click" />
+
+                    </center>
+                </div>
+            </div>
+        </div>
+        
+        <a href="menu.aspx"><< Back To Menu</a>
     </div>
 </asp:Content>

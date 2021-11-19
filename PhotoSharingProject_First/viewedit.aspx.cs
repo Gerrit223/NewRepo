@@ -49,5 +49,31 @@ namespace PhotoSharingProject_First
                 Response.Write("<script>alert('" + ex.Message + "');</script>");
             }
         }
+
+        protected void btnUpdate_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                SqlConnection con = new SqlConnection(strcon);
+                if (con.State == ConnectionState.Closed)
+                {
+                    con.Open();
+                }
+
+                SqlCommand com = new SqlCommand("update photos set location = @location where photo_id = @photo_id", con);
+                com.Parameters.AddWithValue("@location", txtUpdateTag.Text.Trim());
+                com.Parameters.AddWithValue("@photo_id", int.Parse(txtId.Text.Trim()));
+                com.ExecuteNonQuery();
+                con.Close();
+                Response.Write("<script>alert('Image Location Successfully Updated');</script>");
+                txtId.Text = "";
+                txtUpdateTag.Text = "";
+            }
+            catch (Exception ex)
+            {
+                Response.Write("<script>alert('" + ex.Message + "');</script>");
+            }
+        }
     }
+    
 }
