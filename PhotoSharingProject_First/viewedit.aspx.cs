@@ -40,6 +40,7 @@ namespace PhotoSharingProject_First
                // com.Parameters.AddWithValue("@photo_id", txtId.Text.Trim());
                 com.ExecuteNonQuery();
                 con.Close();
+                Response.Redirect(Request.RawUrl);
                 Response.Write("<script>alert('Image Successfully Deleted');</script>");
                 txtId.Text = "";
 
@@ -65,14 +66,18 @@ namespace PhotoSharingProject_First
                 com.Parameters.AddWithValue("@photo_id", int.Parse(txtId.Text.Trim()));
                 com.ExecuteNonQuery();
                 con.Close();
+                Response.Redirect(Request.RawUrl);
                 Response.Write("<script>alert('Image Location Successfully Updated');</script>");
                 txtId.Text = "";
                 txtUpdateTag.Text = "";
+                
             }
             catch (Exception ex)
             {
                 Response.Write("<script>alert('" + ex.Message + "');</script>");
             }
+
+            
         }
     }
     
